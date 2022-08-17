@@ -1,0 +1,56 @@
+.card{
+    color: rgb(14, 13, 13);
+    font-size: 2.0rem;
+    text-align: center;
+    align-items: center;
+    margin: 2rem 0 1rem; 
+    color: #FFF;
+    width: 250px;
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(99, 102, 102);
+    padding: 1rem;
+}
+
+.card p {
+    display: flex;
+    text-align: center;
+    font-size: 25px
+}
+
+.card h2 {
+    display: flex;
+    text-align: center;
+    font-size: 25px
+}
+
+
+.card img {
+    padding: 1rem;
+    max-width: 100%;
+}
+
+.card svg{
+    color: gold;
+}
+
+.card button{
+    background-color: #B232ED ;
+    color: rgb(236, 234, 234);
+    padding: 0.3rem;
+    font-size: 1.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.4s;
+    text-decoration: none;
+    width: 150px;
+}
+
+.card img,
+.card h2,
+.card p{
+    margin-bottom: 1rem;
+ }
