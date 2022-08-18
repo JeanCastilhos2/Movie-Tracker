@@ -2,7 +2,6 @@ import { useEffect, useState} from 'react';
 import { useSearchParams } from 'react-router-dom';
 
 import CardFilmes from '../components/CardFilmes';
-
 import Styles from './GridFilmes.module.css';
 
 const buscaURL = import.meta.env.VITE_SEARCH
@@ -21,11 +20,11 @@ const Buscar = () => {
 
     const getBuscaFilmes = async (url) => {
 
-        const response = await fetch(url)
+        const response = await fetch(url);
 
-        const data = await response.json()
+        const data = await response.json();
 
-        setFilmes(data.results)
+        setFilmes(data.results);
 
     }
 

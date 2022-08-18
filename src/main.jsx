@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import App from './App'
 import Home from '../src/pages/Home'
 import Filme from '../src/pages/Filme'
+import MeusFilmes from '../src/pages/MeusFilmes'
 import Buscar from './pages/Buscar'
 
 import './index.css'
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Routes>
           <Route element={<App/>}>
              <Route path="/" element={<Home/>}/>
+             <Route path="meusfilmes" element={<MeusFilmes/>}/>
              <Route path="filme/:id" element={<Filme/>}/>
              <Route path="buscar" element={<Buscar/>}/>
           </Route>

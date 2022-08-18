@@ -12,11 +12,11 @@ const Home = () => {
 
     const getHomeFilmes = async (url) => {
 
-        const response = await fetch(url)
+        const response = await fetch(url);
 
-        const data = await response.json()
+        const data = await response.json();
 
-        setHomeFilmes(data.results)
+        setHomeFilmes(data.results);
 
 
     }
@@ -24,6 +24,8 @@ const Home = () => {
     useEffect(() => {
 
         const homeFilmesURL = `${moviesURL}popular?${apiKEY}`;
+
+        console.log(homeFilmesURL);
 
         getHomeFilmes(homeFilmesURL);
 
