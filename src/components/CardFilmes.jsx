@@ -1,11 +1,10 @@
-import axios from "axios"
 import {Link} from 'react-router-dom';
 import { FaStar } from 'react-icons/fa';
 import Styles from './CardFilmes.module.css';
 
 const imageURL = import.meta.env.VITE_IMG;
 
-const CardFilmes = ({ filme, showLink = true }) => {
+const CardFilmes = ({ filme }) => {
 
   function cadastrar(){
 
@@ -15,23 +14,50 @@ const CardFilmes = ({ filme, showLink = true }) => {
       title: filme.title,
       poster_path: filme.poster_path,
       vote_average: filme.vote_average,
+      
       }
-      axios.post('http://localhost:4567/addfilme', data)
+
+    fetch("http://localhost:4567/addfilme", {
+     method: "POST",
+     headers: {"Content-Type": "application/json", },
+     body: JSON.stringify(data),
+  })
+
   }
 
+  function deletar(){
+
+    const data = {
+    
+      id: filme.id,
+
+      }
+
+    fetch("http://localhost:4567/delfilme", {
+     method: "POST",
+     headers: {"Content-Type": "application/json", },
+     body: JSON.stringify(data),
+  })
+
+  }
+     
     return(
+
         <div className={Styles.card}>
            <img src={imageURL + filme.poster_path} alt={filme.title} />
-           <button onClick={cadastrar}>+</button>
+           {filme.add === 'true' ?
+           <button className={Styles.add} onClick={deletar}>-</button> 
+           :
+           <button className={Styles.add_btn} onClick={cadastrar}>+</button>
+           }
            <h2>{filme.title}</h2>
            <p>
              {filme.vote_average}<FaStar/>
            </p>
-           {showLink && 
-             <Link to={`/filme/${filme.id}`}>
+           <Link to={`/filme/${filme.id}`}>
                <button>Detalhes</button>
-             </Link>        
-           }
+           </Link>        
+
         </div>
     )
 }

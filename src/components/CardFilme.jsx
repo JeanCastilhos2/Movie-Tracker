@@ -2,13 +2,13 @@ import { FaStar } from 'react-icons/fa';
 
 const imageURL = import.meta.env.VITE_IMG;
 
-const CardFilme = ({ filme }) => {
-    return(
+export function CardFilme({ filme }) {
+    return (
         <div>
             <img src={imageURL + filme.poster_path} alt={filme.title} />
             <h1>{filme.title}</h1>
             <p>
-            <FaStar/>{filme.vote_average}
+                <FaStar />{filme.vote_average}
             </p>
             <p>Idioma: {filme.original_language} </p>
             <p>Duração: {filme.runtime} </p>
@@ -18,7 +18,6 @@ const CardFilme = ({ filme }) => {
             <p>Sinopse:</p>
             <p>{filme.overview}</p>
         </div>
-    )
+    );
 }
 
-export default CardFilme;

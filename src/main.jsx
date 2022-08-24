@@ -1,14 +1,15 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter, Routes, Route} from 'react-router-dom'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
-import App from './App'
-import Home from '../src/pages/Home'
-import Filme from '../src/pages/Filme'
-import MeusFilmes from '../src/pages/MeusFilmes'
-import Buscar from './pages/Buscar'
+import App from './App';
+import Home from '../src/pages/Home';
+import Filme from '../src/pages/Filme';
+import MeusFilmes from '../src/pages/MeusFilmes';
+import TopFilmes from '../src/pages/TopFilmes';
+import Buscar from './pages/Buscar';
 
-import './index.css'
+import './index.css';
 
 
 
@@ -19,6 +20,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route element={<App/>}>
              <Route path="/" element={<Home/>}/>
              <Route path="meusfilmes" element={<MeusFilmes/>}/>
+             <Route path="topfilmes" element={<TopFilmes/>}/>
              <Route path="filme/:id" element={<Filme/>}/>
              <Route path="buscar" element={<Buscar/>}/>
           </Route>

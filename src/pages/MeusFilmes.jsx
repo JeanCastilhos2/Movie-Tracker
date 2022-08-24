@@ -5,9 +5,9 @@ import Styles from './GridFilmes.module.css';
 
 const MeusFilmes = () => {
 
-    const [meusFilmes,setMeusFilmes] = useState([]);
+   const [meusFilmes,setMeusFilmes] = useState([]);
 
-    const getMeusFilmes = async (url) => {
+   const getMeusFilmes = async (url) => {
 
         const response = await fetch(url);
 
@@ -15,7 +15,7 @@ const MeusFilmes = () => {
 
         setMeusFilmes(data);
         
-    }
+    } 
 
     useEffect(() => {
 
@@ -23,7 +23,7 @@ const MeusFilmes = () => {
 
         getMeusFilmes(meusFilmesURL);
 
-    }, []);
+    },[meusFilmes]); 
 
     return(
           <div className={Styles.filmes_container}>

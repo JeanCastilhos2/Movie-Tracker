@@ -1,4 +1,4 @@
-const db = require('./db');
+const db = require('../db/db_config');
 
 const Filmes = db.sequelize.define('tabela_filmes',{
     
@@ -13,6 +13,9 @@ const Filmes = db.sequelize.define('tabela_filmes',{
             allowNull: false,
         },
     vote_average: {type: db.Sequelize.INTEGER,
+            allowNull: false,
+        }, 
+    add: {type: db.Sequelize.STRING,
             allowNull: false,
         } 
 })

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import CardFilme from '../components/CardFilme';
+import { CardFilme } from '../components/CardFilme';
 
 const moviesURL = import.meta.env.VITE_API;
 const apiKEY = import.meta.env.VITE_API_KEY;

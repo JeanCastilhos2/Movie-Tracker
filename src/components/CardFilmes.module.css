@@ -38,8 +38,8 @@
 }
 
 .card button{
-    background-color: #B232ED ;
-    color: rgb(236, 234, 234);
+    background-color: #e9e3eb ;
+    color: rgb(8, 8, 8);
     padding: 0.3rem;
     font-size: 1.5rem;
     text-align: center;
@@ -49,6 +49,21 @@
     transition: 0.4s;
     text-decoration: none;
     width: 150px;
+    border-radius: 50px;
+}
+
+.add{
+    background-color: #9217bb ;
+    color: black;
+    padding: 0.3rem;
+    font-size: 1.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.4s;
+    text-decoration: none;
+    border-radius: 50px; 
 }
 
 .card img,

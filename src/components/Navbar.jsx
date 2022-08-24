@@ -26,6 +26,9 @@ const Navbar = () => {
             <Link to="/">
                <img src={Logo} alt="logo"/> 
             </Link>
+            <Link to="topfilmes">
+               <h2>Top Filmes</h2>
+              </Link>
             <Link to="meusfilmes">
                <h2>Meus filmes</h2>
               </Link>
