@@ -1,6 +1,6 @@
 {
   "name": "movie_tracker",
-  "homepage" : "https://jeancastilhos2.github.io/Movie-Tracker/",
+  "homepage" : "Movie-Tracker/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
