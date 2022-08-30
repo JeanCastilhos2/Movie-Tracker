@@ -1,73 +1,83 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+
 .card{
     color: rgb(237, 231, 231);
-    font-size: 2.0rem;
     text-align: center;
     align-items: center;
     margin: 2rem 0 1rem; 
     color: #FFF;
-    width: 250px;
-    margin-bottom: 2.5rem;
+    width: 270px; 
     display: flex;
     flex-direction: column;
     background-color: rgb(99, 102, 102);
-    padding: 1rem;
+    padding: 0rem;
+    box-shadow: 10px 5px 5px rgb(33, 33, 33);
 
 }
 
-
-.card p {
+.card :link{
+    text-decoration: none;
     display: flex;
-    text-align: center;
-    font-size: 25px
+    align-items: center;
+    cursor: pointer;
+	width: 100%;
+	background: #2f2f2f;
+	color: white;
+	padding: 15px ;
+	/* font-size: 1rem; */
+	/* font-weight: bold; */
+    text-decoration: none;
+	text-transform: uppercase;
+    
 }
-
-.card h2 {
-    display: flex;
-    text-align: center;
-    font-size: 25px
-}
-
 
 .card img {
     padding: 1rem;
     max-width: 100%;
+    box-shadow: 2px 2px 2px 1px rgba(58, 56, 56, 0.2);
 }
 
 .card svg{
     color: gold;
 }
 
-.card button{
-    background-color: #e9e3eb ;
-    color: rgb(8, 8, 8);
-    padding: 0.3rem;
-    font-size: 1.5rem;
+.card h2{
+    font: 20px "Lato", Arial, sans-serif;
+    color: gold;
     text-align: center;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    transition: 0.4s;
-    text-decoration: none;
-    width: 150px;
-    border-radius: 50px;
 }
 
-.add{
-    background-color: #9217bb ;
-    color: black;
-    padding: 0.3rem;
-    font-size: 1.5rem;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    transition: 0.4s;
-    text-decoration: none;
-    border-radius: 50px; 
-}
-
-.card img,
-.card h2,
 .card p{
-    margin-bottom: 1rem;
- }
+    display: flex;
+    padding: 20px;
+}
+
+
+.btn_detalhes{
+    display: flex;
+    text-align: center;
+    cursor: pointer;
+	width: 100%;
+	background: #2f2f2f;
+	color: white;
+    border: none;
+	text-transform: uppercase;
+    font: 15px "Lato", Arial, sans-serif;
+   
+	
+}
+ 
+.btn_add{
+    cursor: pointer;
+	width: 40px;
+    height: 40px;
+	background: #7f2dc1;
+	font-weight: bold;
+    border-radius: 100%;
+	text-transform: uppercase;
+	border: 0;
+   
+    
+}
+
+

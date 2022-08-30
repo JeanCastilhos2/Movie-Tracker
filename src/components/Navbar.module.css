@@ -1,3 +1,5 @@
+
+
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -7,14 +9,14 @@
     width: 100%;
     border-radius: 5px;
     line-height: 1em;
+    
 }
 
 .navbar h1{
     margin-left: 80px;
     display: flex;
-    color: #B232ED;
+    color: gold;
     font-size: 40px;
-    font-family: fantasy;
     
 }
 
@@ -31,7 +33,7 @@
 }
 
 .navbar form button{
-    background-color: #B232ED ;
+    background-color:gold;
     border-radius: 4px;
     color: rgb(243, 237, 237);
     font-size: 2.3rem;
@@ -45,6 +47,6 @@
 }
 
 .navbar form button:hover{
-    background-color:#bf69e6 
+    background-color:goldenrod; 
 }
 
