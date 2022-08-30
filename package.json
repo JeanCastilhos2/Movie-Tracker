@@ -1,15 +1,13 @@
 {
   "name": "movie_tracker",
-  "homepage": "https://jeancastilhos2.github.io/Movie-Tracker/",
+  "homepage": "Movie-Tracker/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "preview": "vite preview"
   },
   "dependencies": {
     "axios": "^0.27.2",
