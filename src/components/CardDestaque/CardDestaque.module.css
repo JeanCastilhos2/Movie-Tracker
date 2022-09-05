@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+.card :link {
+    text-decoration: none;
+}
+.card_destaque {
+    height: 85vh;
+}
+
+.card_vertical {
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to top, rgb(38, 38, 38) 10%, transparent 90% );
+}
+
+.card_horizontal {
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to right, rgb(38, 38, 38) 6%, transparent 94% );
+}
+
+.titulo {
+    padding-top: 500px;
+    padding-left: 50px;
+    font-size: 60px;
+    font-weight: bold;
+    color: blueviolet;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+}
+
+.info {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.descrição {
+    margin-top: 15px;
+    padding-left: 50px;
+    font-size: 20px;
+    color: #999;
+    max-width: 50%;
+}
+

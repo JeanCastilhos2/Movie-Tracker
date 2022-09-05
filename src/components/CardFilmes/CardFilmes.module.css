@@ -1,0 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+
+.card{
+    margin: 2rem 0 1rem; 
+    color: #FFF;
+    width: 280px; 
+    display: flex;
+    flex-direction: column;
+    padding: 0rem;
+}
+
+.card img{
+    width: 100%;
+    transform: scale(0.9);
+    transition: all ease 0.2s;
+}
+
+.card img:hover{
+    width: 100%;
+    transform: scale(1);
+}
+
+
+
+
+

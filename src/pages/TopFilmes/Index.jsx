@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import CardFilmes from "../components/CardFilmes";
-import Styles from './GridFilmes.module.css';
+import BtnSubir from "../../components/BtnSubir/Index";
+import CardFilmes from "../../components/CardFilmes/Index";
+import Styles from '../GridFilmes.module.css';
 
 const moviesURL = import.meta.env.VITE_API;
 const apiKEY = import.meta.env.VITE_API_KEY;
@@ -18,6 +19,8 @@ const TopFilmes = () => {
 
         setTopFilmes(data.results);
 
+        console.log(data);
+
     } 
    
     useEffect(() => {
@@ -31,10 +34,14 @@ const TopFilmes = () => {
     }, []);
 
     return(
+
+          <>
           <div className={Styles.filmes_container}>
              {topFilmes.length === 0 && <p>Carregando</p> }
              {topFilmes.length > 0 && topFilmes.map((filme) => <CardFilmes key={filme.id} filme={filme} />)}
           </div>
+          <BtnSubir/>
+          </>
     )
 }
 

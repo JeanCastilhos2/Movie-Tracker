@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
 import App from './App';
-import Home from '../src/pages/Home';
-import Filme from '../src/pages/Filme';
-import MeusFilmes from '../src/pages/MeusFilmes';
-import TopFilmes from '../src/pages/TopFilmes';
-import Buscar from './pages/Buscar';
+import Home from '../src/pages/Home/Index';
+import Filme from '../src/pages/Filme/Index';
+import MeusFilmes from '../src/pages/MeusFilmes/Index';
+import TopFilmes from '../src/pages/TopFilmes/Index';
+import Buscar from '../src/pages/Buscar/Index';
 
 import './index.css';
 

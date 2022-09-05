@@ -2,7 +2,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { BiSearchAlt2 } from 'react-icons/bi';
 import Styles from './Navbar.module.css';
-import Logo from '../assets/logo.png';
+import Logo from '../../assets/Logo/logo.png';
 
 
 const Navbar = () => {

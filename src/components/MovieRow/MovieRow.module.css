@@ -1,0 +1,74 @@
+.mv_container {
+   margin-bottom: 30px;  
+}
+
+.mv_container h2 { 
+    margin-top: 15px;
+    padding-left: 50px;
+    font-size: 20px;
+    color: #999;
+ }
+
+ .mv_lista_area {
+    overflow-x: hidden;  
+    padding-left: 30px; 
+ }
+
+ .mv_lista {
+    transition: all ease 0.5s;
+ }
+
+.mv_filme {
+    display: inline-block;
+    width: 200px;
+}
+
+.mv_filme img {
+    width: 100%;
+    transform: scale(0.9);
+    transition: all ease 0.2s;
+}
+
+.mv_filme img:hover{
+    width: 100%;
+    transform: scale(1);
+}
+
+
+.btn_left,
+.btn_rigth {   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 100px;
+    font-Size: 40px;
+    color: white;
+    background-Color: rgba(0,0,0,0.2);
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    margin-top: 100px;
+    margin-right: 15px;
+    margin-left: 15px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: all ease 0.3s;
+
+}
+
+.btn_left {
+    left: 0;
+}
+
+.btn_rigth {
+    right: 0;
+}
+
+.mv_container:hover .btn_left,
+.mv_container:hover .btn_rigth {
+   opacity: 1;
+ }
+
+

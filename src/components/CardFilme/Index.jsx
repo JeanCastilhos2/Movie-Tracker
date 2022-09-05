@@ -45,8 +45,23 @@ export function CardFilme( { filme } ) {
     return (
    
 
-<div className={Styles.movie_card}>
-  
+<div className={Styles.card} style={{
+           backgroundSize: 'cover',
+           backgroundImage: `url(https://image.tmdb.org/t/p/original${filme.backdrop_path})`,
+        }}>
+    <div className={Styles.info}>
+         <div className={Styles.titulo}>
+            {filme.title}
+            <span>{filme.original_language}</span>   
+         </div>
+         <div className={Styles.nota}>
+           {filme.vote_average}<FaStar />
+         </div>
+         <div className={Styles.descrição}>
+              {filme.overview}
+         </div> 
+    </div>
+ {/* 
     <div className={Styles.container}>
           
         <div className={Styles.hero}>
@@ -82,7 +97,7 @@ export function CardFilme( { filme } ) {
            </div> 
       </div> 
 
-    </div> 
+    </div>  */}
 
 </div> 
 
