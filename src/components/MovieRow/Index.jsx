@@ -39,7 +39,7 @@ const MovieRow = ( { lista , titulo } ) => {
                         {lista.length === 0 && <p>Carregando</p> }
                         {lista.length > 0 && lista.map((filme, key) => (
                            <div className={Style.mv_filme}>
-                              <Link to={`/filme/${filme.id}`}>
+                              <Link to={`/titulo/${filme.id}`}>
                                  <img src={imageURL + filme.poster_path} alt={filme.title} />
                               </Link>   
                            </div>

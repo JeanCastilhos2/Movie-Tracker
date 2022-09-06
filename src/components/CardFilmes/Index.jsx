@@ -8,7 +8,7 @@ const CardFilmes = ({ filme }) => {
     return(
 
         <div className={Styles.card}>
-           <Link to={`/filme/${filme.id}`}>
+           <Link to={`/titulo/${filme.id}`}>
                <img src={imageURL + filme.poster_path} alt={filme.title} />
            </Link>        
 

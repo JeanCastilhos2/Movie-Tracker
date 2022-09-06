@@ -8,7 +8,7 @@ const CardDestaque = ( { destaque } ) => {
 
 
     <div className={Styles.card}>
-      <Link to={`/filme/${destaque.id}`}>
+      <Link to={`/titulo/${destaque.id}`}>
         <div className={Styles.card_destaque} style={{
            backgroundSize: 'cover',
            backgroundImage: `url(https://image.tmdb.org/t/p/original${destaque.backdrop_path})`,

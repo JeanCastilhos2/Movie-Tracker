@@ -5,7 +5,7 @@ import { CardFilme } from '../../components/CardFilme/Index';
 const moviesURL = import.meta.env.VITE_API_M;
 const apiKEY = import.meta.env.VITE_API_KEY;
 
-const Filme = () => {
+const Titulo = () => {
 
     const {id} = useParams();
 
@@ -39,4 +39,4 @@ const Filme = () => {
     )
 }
 
-export default Filme;
+export default Titulo;

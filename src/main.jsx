@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
 import App from './App';
 import Home from '../src/pages/Home/Index';
-import Filme from '../src/pages/Filme/Index';
+import Titulo from '../src/pages/Titulo/Index';
 import MeusFilmes from '../src/pages/MeusFilmes/Index';
 import TopFilmes from '../src/pages/TopFilmes/Index';
 import Buscar from '../src/pages/Buscar/Index';
@@ -21,7 +21,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
              <Route path="/" element={<Home/>}/>
              <Route path="meusfilmes" element={<MeusFilmes/>}/>
              <Route path="topfilmes" element={<TopFilmes/>}/>
-             <Route path="filme/:id" element={<Filme/>}/>
+             <Route path="titulo/:id" element={<Titulo/>}/>
              <Route path="buscar" element={<Buscar/>}/>
           </Route>
       </Routes>
