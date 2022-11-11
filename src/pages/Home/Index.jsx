@@ -1,77 +1,56 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import CardDestaque from '../../components/CardDestaque/Index';
+import CardDestaque from "../../components/CardDestaque/Index";
 import MovieRow from "../../components/MovieRow/Index";
 import BtnSubir from "../../components/BtnSubir/Index";
-import gets from '../../services/gets';
-
+import { getLista } from "../../services/gets";
 
 const Home = () => {
+  const [listaSeries, setListaSeries] = useState([]);
+  const [listaTreding, setListaTreding] = useState([]);
+  const [listaAcao, setListaAcao] = useState([]);
+  const [destaque, setDestaque] = useState([]);
 
-    const [ listaSeries , setListaSeries ] = useState([]);
+  const getHomeFilmes = async () => {
+    const listaS = await getLista(
+      `/discover/tv?with_network=213&language=pt-BR`
+    );
+    setListaSeries(listaS);
 
-    const [ listaTreding , setListaTreding ] = useState([]);
+    const listaT = await getLista(`/trending/all/week?language=pt-BR`);
+    setListaTreding(listaT);
 
-    const [ listaAcao , setListaAcao ] = useState([]);
+    const listaA = await getLista(
+      `/discover/movie?with_genres=28&language=pt-BR`
+    );
+    setListaAcao(listaA);
 
-    const [ destaque, setDestaque ] = useState([]);
+    const random = Math.floor(Math.random() * listaT.length);
+    const filmeDestaque = listaT[random];
+    setDestaque(filmeDestaque);
+  };
 
+  useEffect(() => {
+    getHomeFilmes();
+  }, []);
 
-    
-    const getHomeFilmes = async () => {
-
-        const listaS = await gets.getlistaSeries(); 
-        
-        setListaSeries(listaS);
-        
-
-        const listaT = await gets.getlistaTreding();  
-
-        setListaTreding(listaT);
-
-        console.log(listaT)
-        
-        
-        const listaA = await gets.getlistaAcao();  
-
-        setListaAcao(listaA);
-
-        const random = Math.floor( Math.random() * (listaT.length) );
-
-        const filmeDestaque = listaT[random];
-
-        setDestaque(filmeDestaque);
-
-    }  
-
-    useEffect(() => {
-     
-        getHomeFilmes();
-
-    }, []); 
-
-
-
-    return(
-
+  return (
     <div>
-        <div>
-           <CardDestaque destaque={destaque} />         
-        </div>  
-        <div>
-           <MovieRow lista={listaSeries} titulo="Séries" />
-        </div>
-        <div>
-           <MovieRow lista={listaTreding} titulo="Popular" />
-        </div>
-        <div>
-           <MovieRow lista={listaAcao} titulo="Ação" />
-        </div>
-           <BtnSubir/>
+      <div>
+        <CardDestaque destaque={destaque} />
+      </div>
+      <div>
+        <MovieRow lista={listaSeries} titulo="Séries" />
+      </div>
+      <div>
+        <MovieRow lista={listaTreding} titulo="Popular" />
+      </div>
+      <div>
+        <MovieRow lista={listaAcao} titulo="Ação" />
+      </div>
+      <BtnSubir />
     </div>
-    
-    )
-
-}
+  );
+};
 
 export default Home;

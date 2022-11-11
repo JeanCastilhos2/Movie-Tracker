@@ -1,48 +1,18 @@
 const apiBASE = import.meta.env.VITE_API;
 const apiKEY = import.meta.env.VITE_API_KEY;
 
+const apiRequest = async (endPoint) => {
+  const response = await fetch(`${apiBASE}${endPoint}&${apiKEY}`);
+  const data = await response.json();
+  return data.results;
+};
 
-async function fetchBase(url) {
-
-    const response = await fetch(`${apiBASE}${url}`);
-
-    const data = await response.json();
-
-    return data.results;  
-
-}
-
-
-export default {
-
-    getlistaSeries: async () => {
-
-        const lista = await fetchBase(`/discover/tv?with_network=213&language=pt-BR&${apiKEY}`);
-
-        return lista
-
-    },
-
-    getlistaTreding: async () => {
-
-        const lista = await fetchBase(`/trending/all/week?language=pt-BR&${apiKEY}`);
-
-        return lista
-
-    },
-
-    getlistaAcao: async () => {
-
-        const lista = await fetchBase(`/discover/movie?with_genres=28&language=pt-BR&${apiKEY}`);
-
-        return lista
-
-    },
+export const getLista = async (endPoint) => (await apiRequest(endPoint))
 
 
 
+  
 
-      
   /*   getlistaFilmes: async () => {
         return [
             {
@@ -92,4 +62,4 @@ export default {
         ];
     }
  */
-}
+

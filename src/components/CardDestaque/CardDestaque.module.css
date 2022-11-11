@@ -5,6 +5,7 @@
 }
 .card_destaque {
     height: 85vh;
+    padding-bottom: 20px;
 }
 
 .card_vertical {
@@ -36,6 +37,7 @@
 }
 
 .descrição {
+    padding-bottom: 50px;
     margin-top: 15px;
     padding-left: 50px;
     font-size: 20px;

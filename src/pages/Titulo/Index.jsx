@@ -1,42 +1,26 @@
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { CardFilme } from '../../components/CardFilme/Index';
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { CardFilme } from "../../components/CardFilme/Index";
 
 const moviesURL = import.meta.env.VITE_API_M;
 const apiKEY = import.meta.env.VITE_API_KEY;
 
 const Titulo = () => {
+  const { id } = useParams();
+  const [filme, setFilme] = useState(null);
 
-    const {id} = useParams();
+  const getFilme = async (url) => {
+    const response = await fetch(url);
+    const data = await response.json();
+    setFilme(data);
+  };
 
-    const [filme, setFilme] = useState(null);
+  useEffect(() => {
+    const filmeURL = `${moviesURL}${id}?language=pt-BR&${apiKEY}`;
+    getFilme(filmeURL);
+  }, []);
 
-    const getFilme = async (url) => {
-
-        const response = await fetch(url);
-
-        const data = await response.json();
-
-        setFilme(data);
-
-        console.log(data)
-   
-    }
-
-    useEffect(() => {
-
-        const filmeURL = `${moviesURL}${id}?language=pt-BR&${apiKEY}`;
-
-        getFilme(filmeURL);
-
-        console.log(filmeURL)
-
-    }, []);
-
-
-    return(
-        <div>{filme && <CardFilme filme={filme} />}</div>
-    )
-}
+  return <div>{filme && <CardFilme filme={filme} />}</div>;
+};
 
 export default Titulo;
