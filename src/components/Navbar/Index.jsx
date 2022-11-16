@@ -24,15 +24,10 @@ const Navbar = () => {
       <div>
         <nav className={Styles.navbar} id="navbar">
             <Link to="/">
-               <h2>≡</h2>
-            </Link>
-            <Link to="/">
                <img src={Logo} alt="logo"/> 
             </Link>
-            <form onSubmit={handleSubmit}>
                <input type="text" placeholder="Buscar" onChange={(e) => setBusca(e.target.value)} value={busca}/>
-               <button type="submit" ><BiSearchAlt2/></button>
-            </form>
+               <button onSubmit={handleSubmit} type="submit" ><BiSearchAlt2/></button>
         </nav>
       </div>
     )
