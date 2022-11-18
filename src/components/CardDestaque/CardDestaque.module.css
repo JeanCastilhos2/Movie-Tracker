@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
+.card{
+    padding-bottom: 10%;
+}
 .card :link {
     text-decoration: none;
 }
 .card_destaque {
-    height: 85vh;
-    padding-bottom: 20px;
+    height: 80vh;
 }
 
 .card_vertical {

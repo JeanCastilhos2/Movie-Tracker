@@ -20,9 +20,6 @@ const CardDestaque = ( { destaque } ) => {
                   {destaque.title && destaque.title} 
                   {destaque.name && destaque.name} 
                 </div>
-                <div className={Styles.info}>
-                    <div className={Styles.pontos}></div>
-                </div>
                 <div className={Styles.descrição}>{destaque.overview}</div>
              </div>
            </div> 
