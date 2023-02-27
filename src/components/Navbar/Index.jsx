@@ -12,6 +12,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
+   console.log(busca)
   e.preventDefault();
     
     if(!busca) return;

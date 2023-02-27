@@ -1,26 +1,33 @@
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { CardFilme } from "../../components/CardFilme/Index";
+import { useState, useEffect } from "react"
+import { useParams } from "react-router-dom"
+import { CardFilme } from "../../components/CardFilme/Index"
 
-const moviesURL = import.meta.env.VITE_API_M;
-const apiKEY = import.meta.env.VITE_API_KEY;
+const endPointFilmes = import.meta.env.VITE_API_M
+const endPointSeries = import.meta.env.VITE_API_S
+const apiKEY = import.meta.env.VITE_API_KEY
 
 const Titulo = () => {
-  const { id } = useParams();
-  const [filme, setFilme] = useState(null);
+  const { tipo, id } = useParams()
+  const [titulo, setTitulo] = useState(null)
 
-  const getFilme = async (url) => {
-    const response = await fetch(url);
-    const data = await response.json();
-    setFilme(data);
+  const getTitulo = async (url) => {
+    const response = await fetch(url)
+    const data = await response.json()
+    setTitulo(data)
   };
 
+  let tituloURL
+  tipo === 'filme'
+    ? tituloURL = `${endPointFilmes}${id}?language=pt-BR&${apiKEY}`
+    : tituloURL = `${endPointSeries}${id}?language=pt-BR&${apiKEY}`
+
   useEffect(() => {
-    const filmeURL = `${moviesURL}${id}?language=pt-BR&${apiKEY}`;
-    getFilme(filmeURL);
+    getTitulo(tituloURL)
   }, []);
 
-  return <div>{filme && <CardFilme filme={filme} />}</div>;
-};
+  return (
+    <div>{titulo && <CardFilme filme={titulo} />}</div>
+  )
+}
 
 export default Titulo;
