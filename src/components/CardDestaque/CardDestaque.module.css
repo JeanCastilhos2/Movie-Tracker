@@ -7,7 +7,7 @@
     text-decoration: none;
 }
 .card_destaque {
-    margin-top: 12dvh;
+    margin-top: 12vh;
     height: 90vh;
 }
 
@@ -41,3 +41,18 @@
     max-width: 50%;
 }
 
+@media (max-width:760px) {
+    .card_destaque {
+        height: 70vh;
+        margin-bottom: 30px;
+    }
+    .titulo {
+        font-size: 40px; 
+        padding-top: 40vh;   
+    }  
+    .descrição { 
+        font-size: 14px;
+        max-width: 100%;
+        padding-right: 5vh;
+    }
+   }

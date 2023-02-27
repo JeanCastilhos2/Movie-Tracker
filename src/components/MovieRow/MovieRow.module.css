@@ -71,4 +71,14 @@
    opacity: 1;
  }
 
+ @media (max-width:760px) {
+  .btn_left,
+  .btn_rigth  {
+    opacity: 0.1;
+   }
+  .mv_filme img {
+    width: 80%;
+    transform: scale(1);
+    }
+ }
 
