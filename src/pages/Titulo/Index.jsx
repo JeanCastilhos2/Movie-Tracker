@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { CardFilme } from "../../components/CardFilme/Index"
+import CardDestaque from "../../components/CardDestaque/Index";
 
 const endPointFilmes = import.meta.env.VITE_API_M
 const endPointSeries = import.meta.env.VITE_API_S
@@ -15,18 +16,17 @@ const Titulo = () => {
     const data = await response.json()
     setTitulo(data)
   };
-
+  
   let tituloURL
   tipo === 'filme'
     ? tituloURL = `${endPointFilmes}${id}?language=pt-BR&${apiKEY}`
-    : tituloURL = `${endPointSeries}${id}?language=pt-BR&${apiKEY}`
-
+    : tituloURL = `${endPointSeries}${id}?language=pt-BR&${apiKEY}` 
   useEffect(() => {
     getTitulo(tituloURL)
   }, []);
 
   return (
-    <div>{titulo && <CardFilme filme={titulo} />}</div>
+    <div>{titulo && <CardDestaque destaque={titulo} />}</div>
   )
 }
 
