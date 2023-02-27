@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import BtnSubir from "../../components/BtnSubir/Index";
-import CardFilmes from "../../components/CardFilmes/Index";
+import CardTitulos from "../../components/CardTitulos/Index";
 import Styles from '../GridFilmes.module.css';
 
 const moviesURL = import.meta.env.VITE_API;
@@ -38,7 +38,7 @@ const TopFilmes = () => {
           <>
           <div className={Styles.filmes_container}>
              {topFilmes.length === 0 && <p>Carregando</p> }
-             {topFilmes.length > 0 && topFilmes.map((filme) => <CardFilmes key={filme.id} filme={filme} />)}
+             {topFilmes.length > 0 && topFilmes.map((filme) => <CardTitulos key={filme.id} filme={filme} />)}
           </div>
           <BtnSubir/>
           </>

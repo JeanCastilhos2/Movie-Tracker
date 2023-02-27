@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import CardFilmes from "../../components/CardFilmes/Index";
+import CardTitulos from "../../components/CardTitulos/Index";
 import BtnSubir from "../../components/BtnSubir/Index";
 import Styles from "../GridFilmes.module.css";
 
@@ -23,7 +23,7 @@ const MeusFilmes = () => {
         {meusFilmes.length === 0 && <p>Carregando</p>}
         {meusFilmes.length > 0 &&
           meusFilmes.map((filme) => (
-            <CardFilmes key={filme.id} filme={filme} />
+            <CardTitulos key={filme.id} filme={filme} />
           ))}
       </div>
       <BtnSubir />

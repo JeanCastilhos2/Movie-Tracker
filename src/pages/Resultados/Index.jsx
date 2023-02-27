@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
-
-import CardFilmes from "../../components/CardFilmes/Index";
+import CardTitulos from "../../components/CardTitulos/Index";
 import BtnSubir from "../../components/BtnSubir/Index";
 import Styles from "../GridFilmes.module.css";
 
@@ -10,30 +9,28 @@ const apiKEY = import.meta.env.VITE_API_KEY;
 
 const Resultados = () => {
 
+  const [resultados, setResultados] = useState([]);
   const [searchParams] = useSearchParams();
-  const [buscaFilmes, setBuscaFilmes] = useState([]);
   const query = searchParams.get("q");
 
-  const getBuscaFilmes = async (url) => {
+  const getResultados = async (url) => {
     const response = await fetch(url);
     const data = await response.json();
-    setBuscaFilmes(data.results);
+    setResultados(data.results);
   };
 
   useEffect(() => {
-
     const buscaQueryURL = `${buscaURL}?${apiKEY}&query=${query}`;
-    getBuscaFilmes(buscaQueryURL);
-
+    getResultados(buscaQueryURL);
   }, [query]);
 
   return (
     <>
       <div className={Styles.container}>
         <div className={Styles.filmes_container}>
-          {buscaFilmes.length === 0 && <p>Carregando</p>}
-          {buscaFilmes.length > 0 &&
-            buscaFilmes.map((filme) => <CardFilmes key={filme.id} filme={filme} />)}
+          {resultados.length === 0 && <p>Carregando</p>}
+          {resultados.length > 0 &&
+            resultados.map((resultado) => <CardTitulos key={resultado.id} titulo={resultado} />)}
         </div>
       </div>
       <BtnSubir />
