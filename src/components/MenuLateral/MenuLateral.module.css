@@ -1,0 +1,41 @@
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+  background-color: #141414;
+  opacity: 95%;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 60vh;
+  position: fixed;
+  top: 10vh;
+  z-index: 100;
+}
+
+.side_button{
+    height: 8vh;
+    width: 8vh;
+    position: fixed;
+    left: 5vh;
+    background-color: #141414;
+    opacity: 95%;
+    border: #141414;;
+    color: #fff;
+    cursor: pointer;
+    font-size: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+    margin-left: 0.5%;
+}
+  
+ 
+  

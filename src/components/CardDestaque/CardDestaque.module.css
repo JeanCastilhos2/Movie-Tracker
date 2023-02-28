@@ -7,7 +7,7 @@
     text-decoration: none;
 }
 .card_destaque {
-    margin-top: 12vh;
+    margin-top: 10vh;
     height: 90vh;
 }
 
@@ -44,7 +44,7 @@
 @media (max-width:760px) {
     .card_destaque {
         height: 70vh;
-        margin-bottom: 30px;
+        margin-bottom: 10vh;
     }
     .titulo {
         font-size: 40px; 
