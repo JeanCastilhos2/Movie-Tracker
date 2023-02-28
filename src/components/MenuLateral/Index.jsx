@@ -13,9 +13,16 @@ const MenuLateral = () => {
     <>
       <button className={Styles.side_button} onClick={handleMenu}><FaGripLines/></button>
       <nav className={menuAberto ? Styles.show : Styles.hide}>
-        <ul>
+        <ul className={Styles.ul} >
           <li>Séries</li>
           <li>Filmes</li>
+          <li><span>Ação</span></li>
+          <li><span>Comedia</span></li>
+          <li><span>Drama</span></li>
+          <li><span>Documentarios</span></li>
+          <li><span>Ficção</span></li>
+          <li><span>Suspense</span></li>
+          <li><span>Terror</span></li>
           <li>Minha lista</li>
         </ul>
       </nav>

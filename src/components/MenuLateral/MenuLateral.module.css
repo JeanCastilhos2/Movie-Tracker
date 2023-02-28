@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 .hide {
   display: none;
 }
@@ -16,6 +18,33 @@
   position: fixed;
   top: 10vh;
   z-index: 100;
+}
+
+.ul{
+  height: 80vh;
+  width: 50vh;
+  align-items: center;
+  list-style-type: none; 
+}
+
+.ul li{
+  font-size: 5vh;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  color: #d4c1d4;
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+
+.ul li span{
+  font-size: 2.5vh;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  color: #a130a1;
+  text-decoration: none;
+  padding-top: 1px;
 }
 
 .side_button{
