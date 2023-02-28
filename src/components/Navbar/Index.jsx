@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { BiSearchAlt2 } from 'react-icons/bi';
 import Styles from './Navbar.module.css';
 import Logo from '../../assets/Logo/logo.png';
-import MenuLateral from '../MenuLateral';
+import MenuLateral from '../MenuLateral/Index';
 
 const Navbar = () => {
 
