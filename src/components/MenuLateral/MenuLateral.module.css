@@ -20,6 +20,23 @@
   z-index: 100;
 }
 
+.series_show{
+  display: block;
+}
+
+.series_hide{
+  display: none;
+}
+
+.filmes_show{
+  display: block;
+}
+
+.filmes_hide{
+  display: none;
+}
+
+
 .ul{
   height: 80vh;
   width: 50vh;
@@ -34,7 +51,7 @@
   font-family: 'Oswald', sans-serif;
   color: #d4c1d4;
   text-decoration: none;
-  margin-top: 5px;
+  margin-top: 1px;
 }
 
 
