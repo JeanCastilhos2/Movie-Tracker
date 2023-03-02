@@ -8,6 +8,8 @@ const CardTitulos = ({ titulo }) => {
         <div className={Styles.card}>
             <Link to={`/titulo/${titulo.name ? 'serie' : 'filme'}/${titulo.id}`}>
                 <img src={imageURL + titulo.poster_path} alt={titulo.title} />
+                <a>{titulo.title}</a>
+                <a>{titulo.name}</a>
             </Link>
         </div>
     )

@@ -21,6 +21,7 @@ const Navbar = () => {
   }
 
   const handleSubmit = (e) => {
+    setInputAberto(false)
     e.preventDefault();
     buscar()
   }
@@ -32,7 +33,7 @@ const Navbar = () => {
         <Link to="/">
           <img src={Logo} alt="logo" />
         </Link>
-        <button className={Styles.open_button} onClick={handleSearchInput} type="submit" ><BiSearchAlt2 /></button>
+        <button className={Styles.open_button} onClick={handleSearchInput} type="submit" >{inputAberto ? "x" : <BiSearchAlt2/>}</button>
         <div className={inputAberto ? Styles.search_container_open : Styles.search_container_hide}>
           <input type="text" placeholder="Buscar" onChange={(e) => setBusca(e.target.value)} value={busca} />
           <button className={Styles.search_button} onClick={handleSubmit} type="submit" ><BiSearchAlt2 /></button>

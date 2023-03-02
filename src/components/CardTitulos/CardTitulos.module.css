@@ -7,6 +7,8 @@
     display: flex;
     flex-direction: column;
     padding: 0rem;
+    text-decoration: none;
+    box-shadow: none;
 }
 
 .card img{
@@ -19,6 +21,23 @@
     width: 100%;
     transform: scale(1);
 }
+
+.card a{
+    text-align: center;
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+@media (max-width:760px) {
+    .card{
+        margin-right: 5px;
+        color: #FFF;
+        width: 135px; 
+        display: flex;
+        flex-direction: column;
+        padding: 0rem;
+    }
+   }
 
 
 

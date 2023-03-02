@@ -20,7 +20,7 @@
 .card_horizontal {
     width: inherit;
     height: inherit;
-    background: linear-gradient(to right,rgb(45, 33, 46) 4%, transparent 96% );
+    background: linear-gradient(to right,rgb(46, 44, 46) 4%, transparent 96% );
 }
 
 .titulo {
@@ -43,7 +43,7 @@
 
 @media (max-width:760px) {
     .card_destaque {
-        height: 70vh;
+        height: 80vh;
         margin-bottom: 10vh;
     }
     .titulo {

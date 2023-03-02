@@ -98,11 +98,12 @@
 
 @media (max-width:760px) {
     .navbar :Link {  
-        margin-left: 35%;
+        margin-left: 45%;
     }
     .navbar input{
         margin-left: 40%;
-
+        width: 71vh;
+        text-align: center;
     }
    }
 
