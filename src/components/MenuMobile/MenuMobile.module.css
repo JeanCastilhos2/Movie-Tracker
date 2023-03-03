@@ -1,0 +1,43 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+.MenuMobile {
+    display: none;     
+}
+
+.MenuMobile button{
+    background-color: #141414;
+    opacity: 95%;
+    height: 8vh;
+    width: 8vh;
+    right: 10vh;
+    border: #141414;;
+    color: #fff;
+    cursor: pointer;
+    font-size: 35vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    transition: 0.4s;
+    margin-right: 12vh;
+    margin-left: 5.5vh;
+  }
+
+@media (max-width:760px) {
+    .MenuMobile {
+        display: flex;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 10%;
+        width: 100%;
+        align-items: center;
+        background-color: #141414;
+        opacity: 95%;
+        z-index: 100;
+        position: fixed;      
+    }
+   }
+
+
+
