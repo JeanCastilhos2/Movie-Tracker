@@ -2,7 +2,6 @@ import React from "react";
 import { useState, useEffect } from "react";
 import CardDestaque from "../../components/CardDestaque/Index";
 import MovieRow from "../../components/MovieRow/Index";
-import BtnSubir from "../../components/BtnSubir/Index";
 import { getLista } from "../../services/gets";
 
 const Home = () => {
@@ -75,7 +74,6 @@ const Home = () => {
       <div>
         <MovieRow lista={listaDocumental} titulo="Documental" />
       </div>
-      <BtnSubir />
     </div>
   );
 };

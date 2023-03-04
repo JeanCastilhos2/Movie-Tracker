@@ -16,12 +16,12 @@ const TituloContextProvider = (props) => {
     setTitulos([...titulos, newTitulo]);
   };
 
-  const removeTitulo = (tituloId, tituloTipo, tituloNome, tituloPosterPath) => {
-    setTitulos(titulos.filter((titulo) => titulo.id !== tituloId || titulo.tipo !== tituloTipo || titulo.nome !== tituloNome || titulo.posterPath !== tituloPosterPath));
+  const removeTitulo = (id,tipo, nome, poster_path) => {
+    setTitulos(titulos.filter((titulo) => titulo.id !== id || titulo.tipo !== tipo || titulo.nome !== nome || titulo.poster_path !== poster_path));
   };
 
-  const isTituloSalvo = (tituloId, tituloTipo, tituloNome, tituloPosterPath) => {
-    return titulos.some((titulo) => titulo.id === tituloId && titulo.tipo === tituloTipo && titulo.nome === tituloNome && titulo.posterPath === tituloPosterPath);
+  const isTituloSalvo = (id,tipo, nome, poster_path) => {
+    return titulos.some((titulo) => titulo.id === id && titulo.tipo === tipo && titulo.nome === nome && titulo.poster_path === poster_path);
   };
 
   useEffect(() => {

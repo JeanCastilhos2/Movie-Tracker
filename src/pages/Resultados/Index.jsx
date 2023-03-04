@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import CardTitulos from "../../components/CardTitulos/Index";
-import BtnSubir from "../../components/BtnSubir/Index";
 import Styles from "../GridFilmes.module.css";
 
 const buscaURL = import.meta.env.VITE_SEARCH;
@@ -33,7 +32,6 @@ const Resultados = () => {
             resultados.map((resultado) => <CardTitulos key={resultado.id} titulo={resultado} />)}
         </div>
       </div>
-      <BtnSubir />
     </>
   );
 };

@@ -2,22 +2,22 @@ import { useContext, useState } from "react";
 import { TituloContext } from "../../context/TituloContext";
 import Styles from './BtnTitulo.module.css';
 
-const TituloButton = ({ id, tipo, nome, posterPath }) => {
+const TituloButton = ({ id, tipo, nome, poster_path }) => {
 
-  const { titulos, addTitulo, removeTitulo, isTituloSalvo } = useContext(
+  const { addTitulo, removeTitulo, isTituloSalvo } = useContext(
     TituloContext
   )
 
   const [adicionado, setAdicionado] = useState(
-    isTituloSalvo(id, tipo, nome, posterPath)
+    isTituloSalvo(id, tipo, nome, poster_path)
   )
 
   const handleClick = () => {
     if (adicionado) {
-      removeTitulo(id, tipo, nome, posterPath);
+      removeTitulo(id, tipo, nome, poster_path);
       setAdicionado(false);
     } else {
-      addTitulo({ id, tipo,  nome, posterPath});
+      addTitulo({ id, tipo,  nome, poster_path});
       setAdicionado(true);
     }
   }

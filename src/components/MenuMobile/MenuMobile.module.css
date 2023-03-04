@@ -10,7 +10,6 @@
     opacity: 95%;
     height: 8vh;
     width: 8vh;
-    right: 10vh;
     border: #141414;;
     color: #fff;
     cursor: pointer;
@@ -19,8 +18,7 @@
     align-items: center;
     text-align: center;
     transition: 0.4s;
-    margin-right: 5vh;
-    margin-left: 5.5vh;
+    margin-right: 12%;
   }
 
 @media (max-width:760px) {

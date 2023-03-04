@@ -1,11 +1,12 @@
 .BtnTitulo{
-    width: 20vh;
-    height: 20vh;
-    border-radius: 100px;
+    width: 25vh;
+    height: 15vh;
+    border-radius: 50px;
     background-color: blueviolet;
     font-size: xx-large;
     color: azure;
+    margin-top: 5vh;
     align-items: center;
-    margin-left: 40%;
     cursor: pointer;
+    border: solid 1px blueviolet ;
 }

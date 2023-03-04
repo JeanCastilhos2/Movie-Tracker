@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import BtnTitulo from "../../components/BtnTitulo/Index";
 import CardTitulo from "../../components/CardTitulo/Index";
 
 const endPointFilmes = import.meta.env.VITE_API_M
@@ -28,10 +27,6 @@ const Titulo = () => {
   return (
     <>
       <div>{titulo && <CardTitulo titulo={titulo} />}</div>
-      <BtnTitulo
-        id={id}
-        tipo={tipo}
-      />
     </>
   )
 

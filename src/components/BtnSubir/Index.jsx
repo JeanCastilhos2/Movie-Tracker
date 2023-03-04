@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 
 const BtnSubir = () => {
 
-
     const [ btnSubir, setBtnSubir ] = useState(false);
 
     useEffect(() => {
@@ -28,17 +27,7 @@ const BtnSubir = () => {
 
       <>
        {btnSubir && (
-        <button style={{
-            position: "fixed",
-            bottom: "50px",
-            right: "150px",
-            height: "75px", 
-            width: "75px",
-            fontSize: "50px",
-            color: "white",
-            backgroundColor: "rgba(0,0,0,0.5)",
-            border: "none",
-        }} onClick={subir}>▲</button>
+        <button onClick={subir}>▲</button>
        )}
       </>  
 
