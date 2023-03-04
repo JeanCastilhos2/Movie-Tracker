@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import BtnTitulo from "../../components/BtnTitulo/Index";
-import CardDestaque from "../../components/CardDestaque/Index";
+import CardTitulo from "../../components/CardTitulo/Index";
 
 const endPointFilmes = import.meta.env.VITE_API_M
 const endPointSeries = import.meta.env.VITE_API_S
@@ -27,7 +27,7 @@ const Titulo = () => {
 
   return (
     <>
-      <div>{titulo && <CardDestaque destaque={titulo} />}</div>
+      <div>{titulo && <CardTitulo titulo={titulo} />}</div>
       <BtnTitulo
         id={id}
         tipo={tipo}

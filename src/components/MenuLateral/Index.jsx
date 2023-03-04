@@ -48,6 +48,11 @@ const MenuLateral = () => {
     navigate(`filmes/${idGenero}`)
   }
 
+  const navegarMinhaLista = () => {
+    setMenuAberto(false)
+    navigate(`minhalista`)
+  }
+
   return (
     <>
       <button className={Styles.side_button} onClick={handleMenu}><FaGripLines /></button>
@@ -73,7 +78,7 @@ const MenuLateral = () => {
             <li onClick={(e) => handleNavegarFilmes(e, "99")}><span>Documentario</span></li>
             <li onClick={(e) => handleNavegarFilmes(e, "27")}><span>Terror</span></li>
           </div>
-          <li>Minha lista</li>
+          <li onClick={navegarMinhaLista}>Minha lista </li>
         </ul>
       </nav>
     </>
