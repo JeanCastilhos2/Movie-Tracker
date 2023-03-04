@@ -25,7 +25,7 @@ const MinhaLista = () => {
         {minhaLista.length === 0 && <p>Sua lista está vazia</p>}
         {minhaLista.length > 0 &&
           minhaLista.map((titulo) => (
-            <CardTitulos key={titulo.id} titulo={titulo.nome} />
+            <CardTitulos key={titulo.id} titulo={titulo} />
           ))}
       </div>
       <BtnSubir />
