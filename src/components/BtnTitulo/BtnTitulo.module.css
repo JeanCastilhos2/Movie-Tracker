@@ -10,3 +10,19 @@
     cursor: pointer;
     border: solid 1px blueviolet ;
 }
+
+.starsContainer{
+    margin-top: 3vh;
+}
+
+.statusContainer{
+    margin-top: 3vh;
+}
+
+.dateContainer input{
+    margin-top: 2vh;
+    align-items: center;
+    background-color: rgb(29, 27, 32);
+    color: azure;
+    text-transform: uppercase;
+}

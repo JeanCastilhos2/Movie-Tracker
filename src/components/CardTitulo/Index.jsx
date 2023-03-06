@@ -3,6 +3,7 @@ import { FaStar } from "react-icons/fa";
 import Styles from "./CardTitulo.module.css";
 
 const CardTitulo = ({ titulo }) => {
+  
   const backgroundImageUrl = `https://image.tmdb.org/t/p/w500${titulo.poster_path}`;
 
   return (
@@ -29,8 +30,7 @@ const CardTitulo = ({ titulo }) => {
             nome={titulo.name || titulo.title}
             poster_path={titulo.poster_path}
           />
-          </div>
-          
+          </div>  
         </div>
       </div>
     </div>
