@@ -11,16 +11,17 @@ const TituloButton = ({ id, tipo, nome, poster_path }) => {
     isTituloSalvo,
     setTituloNota,
     setTituloStatus,
-    setTituloData
+    setTituloData, 
+    getTituloNota
   } = useContext(TituloContext);
 
   const [adicionado, setAdicionado] = useState(
     isTituloSalvo(id, tipo, nome, poster_path)
   )
-  const [nota, setNota] = useState(0);
+  const [nota, setNota] = useState(getTituloNota(id, tipo) || 0);
   const [status, setStatus] = useState("");
   const [data, setData] = useState("");
-
+  
   const handleClick = () => {
     if (adicionado) {
       removeTitulo(id, tipo, nome, poster_path);
@@ -47,8 +48,8 @@ const TituloButton = ({ id, tipo, nome, poster_path }) => {
   }
 
   const handleStatusClick = (option) => {
+    setStatus(option)
     setTituloStatus(id, tipo, option)
-    setTituloData(id, tipo, "")
   }
 
   const handleDateChange = (e) => {
@@ -65,6 +66,7 @@ const TituloButton = ({ id, tipo, nome, poster_path }) => {
           key={i}
           className={Styles.star}
           style={{ color: color }}
+          size={"7vh"}
           onClick={() => handleStarClick(i)}
         />
       );
@@ -114,10 +116,10 @@ const TituloButton = ({ id, tipo, nome, poster_path }) => {
       {adicionado ? (
         <div className={Styles.details}>
           <div className={Styles.starsContainer}>{renderStars()}</div>
-          <div className={Styles.statusContainer}>
+          {/* <div className={Styles.statusContainer}>
             {renderStatusButtons()}
           </div>
-          {renderDateInput()}
+          {renderDateInput()} */}
         </div>
       ) : null}
     </div>

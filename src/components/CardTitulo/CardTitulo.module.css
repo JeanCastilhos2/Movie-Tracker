@@ -13,7 +13,7 @@
 }
 
 .card_vertical {
-  width: 50%;
+  width: 60%;
   height: 100%;
   position: absolute;
   top: 0;
@@ -27,7 +27,7 @@
 }
 
 .card_horizontal {
-  width: 50%;
+  width: 40%;
   height: 100%;
   position: absolute;
   top: 0;
@@ -42,7 +42,7 @@
 .titulo {
   font-size: 60px;
   font-weight: bold;
-  color: blueviolet;
+  color: rgb(131, 76, 182);
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
   margin-top: 25%;
@@ -52,7 +52,7 @@
 .descricao {
   margin-top: 2vh;
   font-size: 20px;
-  color: #999;
+  color: white;
   max-width: 100%;
 }
 
@@ -81,6 +81,10 @@
 }
 
 @media (max-width:760px) {
+  .card{
+    margin-top: 24%;
+    margin-bottom: 30%;
+  }
   .card_destaque {
     height: auto;
     }
@@ -134,7 +138,7 @@
 
     .outrasInformacoes p {
     font-size: medium;
-    margin-bottom: 10%;
+    margin-bottom: 30%;
     }
 
  }

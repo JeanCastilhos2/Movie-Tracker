@@ -97,6 +97,9 @@
 }
 
 @media (max-width:760px) {
+    .navbar{
+        height: 15%;
+    }
     .navbar :Link {  
         margin-left: 45%;
     }

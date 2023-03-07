@@ -57,6 +57,14 @@ const TituloContextProvider = (props) => {
     );
   };
 
+  const getTituloNota = (id, tipo) => {
+    const tituloSalvo = titulos.find((titulo) => titulo.id === id && titulo.tipo === tipo);
+    if (tituloSalvo) {
+      return tituloSalvo.nota;
+    }
+    return null;
+  };
+
   useEffect(() => {
     localStorage.setItem("titulos", JSON.stringify(titulos));
   }, [titulos]);
@@ -70,7 +78,8 @@ const TituloContextProvider = (props) => {
         isTituloSalvo,
         setTituloNota,
         setTituloStatus,
-        setTituloData
+        setTituloData,
+        getTituloNota
       }}
     >
       {props.children}
