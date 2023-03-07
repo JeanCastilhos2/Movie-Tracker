@@ -14,13 +14,7 @@
 .card_vertical {
     width: inherit;
     height: inherit;
-    background: linear-gradient(to top, rgb(38, 38, 38) 10%, transparent 90% );
-}
-
-.card_horizontal {
-    width: inherit;
-    height: inherit;
-    background: linear-gradient(to right,rgb(46, 44, 46) 4%, transparent 96% );
+    background: linear-gradient(to top, rgb(38, 38, 38) 5%, transparent 100% );
 }
 
 .titulo {

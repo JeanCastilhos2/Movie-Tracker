@@ -5,17 +5,14 @@ import Styles from "./CardTitulo.module.css";
 const CardTitulo = ({ titulo }) => {
 
   const backgroundImageUrl = `https://image.tmdb.org/t/p/w500${titulo.poster_path}`;
-  const backgroundImage = `https://image.tmdb.org/t/p/original${titulo.backdrop_path}`
 
   return (
-    <div className={`${Styles.card} ${Styles.card_destaque}`} style={{ backgroundImage }}>
-      <div className={`${Styles.card_vertical} ${Styles.link}`}
-        style={{
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundImage: `url(https://image.tmdb.org/t/p/original${titulo.backdrop_path})`,
-        }}
-      >
+    <div className={`${Styles.card} ${Styles.card_destaque}`} style={{
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundImage: `url(https://image.tmdb.org/t/p/original${titulo.backdrop_path})`,
+    }}>
+      <div className={`${Styles.card_vertical} ${Styles.link}`}>
         <div className={Styles.titulo}>{titulo.title || titulo.name}</div>
         <div className={Styles.descricao}>{titulo.overview}</div>
       </div>

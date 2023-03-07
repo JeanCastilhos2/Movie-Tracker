@@ -7,7 +7,6 @@ const buscaURL = import.meta.env.VITE_SEARCH;
 const apiKEY = import.meta.env.VITE_API_KEY;
 
 const Resultados = () => {
-
   const [resultados, setResultados] = useState([]);
   const [searchParams] = useSearchParams();
   const query = searchParams.get("q");
@@ -29,7 +28,11 @@ const Resultados = () => {
         <div className={Styles.filmes_container}>
           {resultados.length === 0 && <p>Carregando</p>}
           {resultados.length > 0 &&
-            resultados.map((resultado) => <CardTitulos key={resultado.id} titulo={resultado} />)}
+            resultados.map((resultado) => {
+              if (resultado.poster_path) {
+                return <CardTitulos key={resultado.id} titulo={resultado} />;
+              }
+            })}
         </div>
       </div>
     </>

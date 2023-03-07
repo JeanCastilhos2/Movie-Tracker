@@ -1,6 +1,6 @@
 .BtnTitulo{
-    width: 25vh;
-    height: 15vh;
+    width: 20vh;
+    height: 12vh;
     border-radius: 50px;
     background-color: blueviolet;
     font-size: xx-large;
@@ -13,6 +13,7 @@
 
 .starsContainer{
     margin-top: 3vh;
+    cursor: pointer;
 }
 
 .statusContainer{
