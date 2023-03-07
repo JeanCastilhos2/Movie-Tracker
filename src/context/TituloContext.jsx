@@ -16,18 +16,18 @@ const TituloContextProvider = (props) => {
     setTitulos([...titulos, newTitulo]);
   };
 
-  const removeTitulo = (id,tipo, nome, poster_path) => {
+  const removeTitulo = (id, tipo, nome, poster_path) => {
     setTitulos(titulos.filter((titulo) => titulo.id !== id || titulo.tipo !== tipo || titulo.nome !== nome || titulo.poster_path !== poster_path));
   };
 
-  const isTituloSalvo = (id,tipo, nome, poster_path) => {
+  const isTituloSalvo = (id, tipo, nome, poster_path) => {
     return titulos.some((titulo) => titulo.id === id && titulo.tipo === tipo && titulo.nome === nome && titulo.poster_path === poster_path);
   };
 
-  const setNota = (id, tipo, nome, poster_path, nota) => {
+  const setTituloNota = (id, tipo, nota) => {
     setTitulos(
       titulos.map((titulo) => {
-        if (titulo.id === id && titulo.tipo === tipo && titulo.nome === nome && titulo.poster_path === poster_path) {
+        if (titulo.id === id && titulo.tipo === tipo) {
           return { ...titulo, nota };
         }
         return titulo;
@@ -35,33 +35,22 @@ const TituloContextProvider = (props) => {
     );
   };
 
-  const setAssistido = (id, tipo, nome, poster_path) => {
+  const setTituloStatus = (id, tipo, status) => {
     setTitulos(
       titulos.map((titulo) => {
-        if (titulo.id === id && titulo.tipo === tipo && titulo.nome === nome && titulo.poster_path === poster_path) {
-          return { ...titulo, assistido: true };
+        if (titulo.id === id && titulo.tipo === tipo) {
+          return { ...titulo, status: status };
         }
         return titulo;
       })
     );
   };
 
-  const setQueroAssistir = (id, tipo, nome, poster_path) => {
+  const setTituloData = (id, tipo, data) => {
     setTitulos(
       titulos.map((titulo) => {
-        if (titulo.id === id && titulo.tipo === tipo && titulo.nome === nome && titulo.poster_path === poster_path) {
-          return { ...titulo, queroAssistir: true };
-        }
-        return titulo;
-      })
-    );
-  };
-
-  const setDataAssistido = (id, tipo, nome, poster_path, data) => {
-    setTitulos(
-      titulos.map((titulo) => {
-        if (titulo.id === id && titulo.tipo === tipo && titulo.nome === nome && titulo.poster_path === poster_path) {
-          return { ...titulo, assistido: true, dataAssistido: data };
+        if (titulo.id === id && titulo.tipo === tipo) {
+          return { ...titulo, data: data };
         }
         return titulo;
       })
@@ -79,10 +68,9 @@ const TituloContextProvider = (props) => {
         addTitulo,
         removeTitulo,
         isTituloSalvo,
-        setNota,
-        setAssistido,
-        setQueroAssistir,
-        setDataAssistido,
+        setTituloNota,
+        setTituloStatus,
+        setTituloData
       }}
     >
       {props.children}

@@ -4,21 +4,22 @@ import { FaStar } from "react-icons/fa";
 import Styles from "./BtnTitulo.module.css";
 
 const TituloButton = ({ id, tipo, nome, poster_path }) => {
+
   const {
     addTitulo,
     removeTitulo,
     isTituloSalvo,
     setTituloNota,
-    setTituloAssistido,
-    setTituloQueroAssistir,
+    setTituloStatus,
+    setTituloData
   } = useContext(TituloContext);
 
   const [adicionado, setAdicionado] = useState(
     isTituloSalvo(id, tipo, nome, poster_path)
-  );
+  )
   const [nota, setNota] = useState(0);
   const [status, setStatus] = useState("");
-  const [dataAssistido, setDataAssistido] = useState("");
+  const [data, setData] = useState("");
 
   const handleClick = () => {
     if (adicionado) {
@@ -32,7 +33,7 @@ const TituloButton = ({ id, tipo, nome, poster_path }) => {
         poster_path,
         nota,
         status,
-        dataAssistido,
+        data,
       });
       setAdicionado(true);
     }
@@ -43,22 +44,16 @@ const TituloButton = ({ id, tipo, nome, poster_path }) => {
       setNota(num);
       setTituloNota(id, tipo, num);
     }
-  };
+  }
 
-  const handleStatusClick = (value) => {
-    if (adicionado) {
-      setStatus(value);
-      if (value === "assistido") {
-        setTituloAssistido(id, tipo);
-      } else if (value === "quero assistir") {
-        setTituloQueroAssistir(id, tipo);
-      }
-    }
-  };
+  const handleStatusClick = (option) => {
+    setTituloStatus(id, tipo, option)
+    setTituloData(id, tipo, "")
+  }
 
   const handleDateChange = (e) => {
-    setDataAssistido(e.target.value);
-    setTituloDataAssistido(id, tipo, e.target.value);
+    setData(e.target.value);
+    setTituloData(id, tipo, e.target.value);
   };
 
   const renderStars = () => {
@@ -84,9 +79,8 @@ const TituloButton = ({ id, tipo, nome, poster_path }) => {
       return (
         <button
           key={option}
-          className={`${Styles.statusButton} ${
-            active ? Styles.active : ""
-          }`}
+          className={`${Styles.statusButton} ${active ? Styles.active : ""
+            }`}
           onClick={() => handleStatusClick(option)}
         >
           {option}
@@ -102,7 +96,7 @@ const TituloButton = ({ id, tipo, nome, poster_path }) => {
           <label>Data de Assistido:</label>
           <input
             type="date"
-            value={dataAssistido}
+            value={data}
             onChange={handleDateChange}
           />
         </div>
