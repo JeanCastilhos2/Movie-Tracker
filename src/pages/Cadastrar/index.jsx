@@ -32,39 +32,40 @@ const Cadastrar = () => {
     };
 
     return (
-        <>
-            <div className="container">
-                <div className="card">
-                    {mensagem !== '' ? (
-                        <div className={`mensagem ${erro ? 'erro' : ''}`}>
-                            <p>{mensagem}</p>
-                            {erro && (
-                                <button className="tentar-novamente" onClick={() => window.location.reload()}>
-                                    Tentar Novamente
-                                </button>
-                            )}
-                        </div>
-                    )
-                        : (
-                            <form onSubmit={handleSubmit}>
-                                <label htmlFor="nome">Nome</label>
-                                <input type="text" id="nome" name="nome" value={nome} onChange={(e) => setNome(e.target.value)} />
-
-                                <label htmlFor="email">Email</label>
-                                <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-
-                                <label htmlFor="senha">Senha</label>
-                                <input type="password" id="senha" name="senha" value={senha} onChange={(e) => setSenha(e.target.value)} />
-
-                                <button type="submit">Cadastrar</button>
-                            </form>
-                        )
-                    }
-                </div>
+        < div class="background-image">
+            <div className="titulo">
+                <h1>A API do Movie Tracker já está disponivel em sua versão beta </h1>
+                <h2>Com o Movie Tracker voce tem acesso a milhares de titulos para usar de forma gratuita em seus projetos</h2>
+                <h2>Faça sua cadastrado e receba sua chave de acesso para começar agora mesmo !</h2>
             </div>
-            <h1 className='apresentação'>A API do Movie Tracker já está disponivel em sua versão beta, com ela voce tem acesso a milhares de titulos para usar de forma gratuita em seus projetos
-                Faça sua cadastrado e começe e receba sua chave de acesso para começar agora mesmo !</h1>
-        </>
+            <div className="card">
+                {mensagem !== '' ? (
+                    <div className={`mensagem ${erro ? 'erro' : ''}`}>
+                        <p>{mensagem}</p>
+                        {erro && (
+                            <button className="tentar-novamente" onClick={() => window.location.reload()}>
+                                Tentar Novamente
+                            </button>
+                        )}
+                    </div>
+                )
+                    : (
+                        <form onSubmit={handleSubmit}>
+                            <label htmlFor="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" value={nome} onChange={(e) => setNome(e.target.value)} />
+
+                            <label htmlFor="email">Email</label>
+                            <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+
+                            <label htmlFor="senha">Senha</label>
+                            <input type="password" id="senha" name="senha" value={senha} onChange={(e) => setSenha(e.target.value)} />
+
+                            <button type="submit">Cadastrar</button>
+                        </form>
+                    )
+                }
+            </div>
+        </div>
     );
 };
 
