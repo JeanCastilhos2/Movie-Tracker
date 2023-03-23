@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { Link, useNavigate } from 'react-router-dom';
 
 import './Cadastrar.css';
 
@@ -9,6 +10,8 @@ const Cadastrar = () => {
     const [senha, setSenha] = useState('');
     const [mensagem, setMensagem] = useState('');
     const [erro, setErro] = useState(false);
+    const [suceso, setsuceso] = useState(false);
+    
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -20,6 +23,7 @@ const Cadastrar = () => {
             });
             setMensagem(`Um email com sua key de acesso foi enviado para ${email}.`);
             setErro(false);
+            setsuceso(true)
         } catch (error) {
             if (error.response.status === 409) {
                 setMensagem(`O email ${email} já está cadastrado.`);
@@ -32,16 +36,25 @@ const Cadastrar = () => {
     };
 
     return (
-        < div class="background-image">
+        < div className='background' >
             <div className="titulo">
                 <h1>A API do Movie Tracker já está disponivel em sua versão beta </h1>
-                <h2>Com o Movie Tracker voce tem acesso a milhares de titulos para usar de forma gratuita em seus projetos</h2>
-                <h2>Faça sua cadastrado e receba sua chave de acesso para começar agora mesmo !</h2>
+                <p>Com o Movie Tracker voce tem acesso a milhares de titulos para usar de forma gratuita em seus projetos</p>
+                <p>Faça sua cadastrado e começe e receba sua chave de acesso para começar agora mesmo !</p>
             </div>
             <div className="card">
                 {mensagem !== '' ? (
                     <div className={`mensagem ${erro ? 'erro' : ''}`}>
                         <p>{mensagem}</p>
+                        {suceso ?
+                            <Link to="/documentação">
+                                < button className="tentar-novamente">
+                                    Documentação
+                                </button>
+                            </Link>
+                            :
+                            ""
+                        }
                         {erro && (
                             <button className="tentar-novamente" onClick={() => window.location.reload()}>
                                 Tentar Novamente
@@ -65,7 +78,7 @@ const Cadastrar = () => {
                     )
                 }
             </div>
-        </div>
+        </div >
     );
 };
 

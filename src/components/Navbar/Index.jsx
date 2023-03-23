@@ -38,7 +38,6 @@ const Navbar = () => {
           <input type="text" placeholder="Buscar" onChange={(e) => setBusca(e.target.value)} value={busca} />
           <button className={Styles.search_button} onClick={handleSubmit} type="submit" ><BiSearchAlt2 /></button>
         </div>
-
       </nav>
     </div>
   )
