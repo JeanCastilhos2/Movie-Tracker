@@ -11,7 +11,7 @@ const Cadastrar = () => {
     const [mensagem, setMensagem] = useState('');
     const [erro, setErro] = useState(false);
     const [suceso, setsuceso] = useState(false);
-    
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -38,9 +38,9 @@ const Cadastrar = () => {
     return (
         < div className='background' >
             <div className="titulo">
-                <h1>A API do Movie Tracker já está disponivel em sua versão beta </h1>
-                <p>Com o Movie Tracker voce tem acesso a milhares de titulos para usar de forma gratuita em seus projetos</p>
-                <p>Faça sua cadastrado e começe e receba sua chave de acesso para começar agora mesmo !</p>
+                <h1>A API do Movie Tracker já está disponível em sua versão beta</h1>
+                <p>Com o Movie Tracker, você tem acesso a milhares de títulos para usar de forma gratuita em seus projetos.</p>
+                <p>Faça seu cadastro e receba sua chave de acesso para começar agora mesmo!</p>
             </div>
             <div className="card">
                 {mensagem !== '' ? (
